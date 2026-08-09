@@ -328,6 +328,20 @@
 .hero-role{
     /* display:none; */
     font-size:1rem;
+    max-width:100%;
+    white-space:nowrap;      /* Keep it on one line */
+    overflow:hidden;
+    text-overflow:ellipsis;  /* Prevent overflow */
+}
+.hero-desc{
+    font-size:.95rem;
+    max-width:300px;
+    line-height:1.7;
+
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;    /* Limit to 3 lines */
+    overflow:hidden;
 }
 .hero-art{
     margin:70px 0;
