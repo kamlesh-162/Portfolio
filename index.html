@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-inner">
+      <div class="logo">My<span>Portfolio</span></div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-fade"></div>
+    <div class="center">
+    <div class="wrap">
+      <span class="hero-tag">
+        Hello, I'm Kamlesh
+        <span class="cursor"></span>
+      </span>
+      <h1>Creative Developer</h1>
+      <div class="hero-role">Building <strong>digital experiences</strong> that inspire.</div>
+      <div class="hero-desc">I specialize in creating beautiful, responsive, and high-performance web applications using modern technologies.</div>
+
+         <div class="hero-art">
+           <img src="bg.svg" alt="Developer Illustration">
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="resume.pdf" class="btn btn-ghost" target="_blank">Download Resume </a>
+          </div>
+        </div>
+    </div>
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section reveal" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Overview</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="section-note">A brief look into my professional background and what I do.</div>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I am a passionate developer with a strong focus on building scalable web applications. My journey started with a fascination for how things work on the internet, and over the years, I've honed my skills to create robust and intuitive solutions.</p>
+          <p>Whether working on the <strong>frontend</strong> or <strong>backend</strong>, I prioritize clean code, performance, and an exceptional user experience.</p>
+          <div class="badge">Open to new opportunities</div>
+        </div>
+        <div>
+          <div class="stat-card">
+            <div class="num">5+</div>
+            <div class="label">Years of Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">50+</div>
+            <div class="label">Projects Completed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section reveal" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Expertise</span>
+          <h2 class="section-title">My Skills</h2>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-cell">
+          <h3>Frontend</h3>
+          <div class="tag-row">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Vue</span>
+          </div>
+        </div>
+        <div class="skill-cell">
+          <h3>Backend</h3>
+          <div class="tag-row">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+          </div>
+        </div>
+        <div class="skill-cell">
+          <h3>Tools</h3>
+          <div class="tag-row">
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Figma</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section reveal" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Work</span>
+          <h2 class="section-title">Selected Projects</h2>
+        </div>
+      </div>
+      <div class="project-list">
+        <div class="project">
+          <div class="project-index">01</div>
+          <div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <div class="project-role">Full Stack Developer</div>
+          </div>
+          <div>
+            <div class="project-desc">A complete e-commerce solution with product management, shopping cart, and secure checkout integration.</div>
+            <div class="project-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-index">02</div>
+          <div>
+            <h3 class="project-title">Social Media Dashboard</h3>
+            <div class="project-role">Frontend Engineer</div>
+          </div>
+          <div>
+            <div class="project-desc">An intuitive dashboard for managing multiple social media accounts, scheduling posts, and viewing analytics.</div>
+            <div class="project-stack">
+              <span>Vue.js</span>
+              <span>Tailwind CSS</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section reveal" id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Background</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+      </div>
+      <div class="edu">
+        <div class="edu-row">
+          <div class="edu-date">2018 - 2022</div>
+          <div class="edu-what">
+            <h3>B.S. in Computer Science</h3>
+            <p>University of Technology</p>
+          </div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-date">2021</div>
+          <div class="edu-what">
+            <h3>Full Stack Web Development Bootcamp</h3>
+            <p>Tech Academy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section reveal" id="contact">
+    <div class="wrap">
+      <div class="contact-panel">
+        <div>
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Let's work together</h2>
+          <p>I'm currently available for freelance work and open to new opportunities. If you have a project in mind, let's talk!</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:hello@example.com" class="contact-link">hello@example.com</a>
+          <a href="#" class="contact-link">LinkedIn</a>
+          <a href="#" class="contact-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>&copy; 2024 My Portfolio. All rights reserved.</div>
+    <div>Designed & Built with passion.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
