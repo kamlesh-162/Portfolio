@@ -736,6 +736,17 @@
     font-size: .75rem;
     font-weight: 600;
   }
+  .email-mobile {
+    display: none;
+}
+@media (max-width: 450px) {
+    .email-desktop {
+        display: none;
+    }
+    .email-mobile {
+        display: block;
+    }
+}
 .contact-link:hover {
     border-color: var(--violet);
 
