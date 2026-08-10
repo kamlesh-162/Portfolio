@@ -80,11 +80,15 @@
   }
   .logo{
     font-family:var(--mono);
-    font-weight:600;
+    font-weight:800;
     font-size:1rem;
     color:var(--text);
   }
   .logo span{color:var(--violet);}
+  .logo span{color:var(--violet);}
+  @media (max-width:720px){
+    .logo{font-size:1.3rem;}
+  }
   nav ul{
     display:flex;
     gap:clamp(16px,3vw,34px);
@@ -301,6 +305,9 @@
 .hero h1{
     font-size:2.5rem;
 }
+.gero .tag{
+  font-weight: 200;
+}
 .hero-role{
     /* display:none; */
     font-size:1rem;
@@ -324,10 +331,7 @@
     width:100%;
     flex-direction:column;
     gap:14px;
-    margin-top: -20px;
- 
-    
-   
+    margin-top: -20px;   
 }
 .btn{
    
