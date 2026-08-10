@@ -1,5 +1,7 @@
 :root{
     --bg:#000000;
+    --grey :01030980;
+
     --bg-panel:#0b0a24;
     --bg-panel-2:#0e0c2c;
     --indigo-deep:#191b40;
@@ -68,12 +70,12 @@
     z-index:100;
     backdrop-filter:blur(10px);
     background:rgba(5,5,16,0.6);
-    border-bottom:1px solid rgba(255,255,255,0.06);
+    border-bottom:2px solid rgba(255,255,255,0.06);
   }
   .nav-inner{
     max-width:1180px;
     margin:0 auto;
-    padding:18px clamp(20px,5vw,64px);
+    padding:14px clamp(20px,5vw,64px);
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -81,7 +83,7 @@
   .logo{
     font-family:var(--mono);
     font-weight:800;
-    font-size:1rem;
+    font-size:2rem;
     color:var(--text);
   }
   .logo span{color:var(--violet);}
@@ -172,11 +174,13 @@
   }
   .hero-tag{
     font-family:var(--mono);
+    font-weight: 600;
     font-size:1rem;
     color:var(--blue);
     letter-spacing:0.08em;
     margin-bottom:15px;
     margin-top:10px;
+    
   }
    .cursor{
     display:inline-block;
@@ -221,7 +225,7 @@
   .hero-art img{
     display:block;
     width:100%;
-    max-width:1060px;
+    max-width:1300px;
     height:auto;
     margin:0 auto;
     animation:float 7s ease-in-out infinite;
@@ -284,69 +288,64 @@
       font-size:1rem;
       margin-bottom:15px;
       margin-top:0px;
+      
     }
     .hero h1{
       font-size:3.4rem;
     }
     .hero-art{
-      margin:-70px 0 -40px;
+      margin:-90px 0 -40px;
+    }
+    .hero-art img{
+      max-width:460px;
+    }
+  }
+
+  /* ================= MOBILE ================= */
+
+  @media(max-width:764px){
+    .hero{
+      padding-top:90px;
+      padding-bottom:60px;
+    }
+    .hero h1{
+      font-size:2.5rem;
+    }
+    .hero-tag{
+      font-weight: 200;
+    }
+    .hero-role{
+      font-size:1rem;
+      max-width:100%;
+      overflow:hidden;
+    }
+    .hero-desc{
+      font-size:1rem;
+      text-align: center;
+    }
+    .hero-art{
+      margin:20px 0;
     }
     .hero-art img{
       max-width:340px;
     }
+    .hero-actions{
+      width:100%;
+      flex-direction:column;
+      gap:14px;
+      margin-top: 20px;
+    }
+    .btn{
+      width:100%;
+      text-align:center;
+    }
+    .scroll-cue{
+      bottom:8px;
+    }
+    .scroll-cue .line{
+      width:1px; height:20px;
+    }
   }
-/* ================= MOBILE ================= */
-
-@media(max-width:764px){
-.hero{
-    padding-top:90px;
-    padding-bottom:60px;
-}
-.hero h1{
-    font-size:2.5rem;
-}
-.gero .tag{
-  font-weight: 200;
-}
-.hero-role{
-    /* display:none; */
-    font-size:1rem;
-      max-width:100%;
-    /* white-space:nowrap;      Keep it on one line */
-    overflow:hidden;
-    /* text-overflow:ellipsis;  Prevent overflow */
-}
-.hero-desc{
-  
-    font-size:1rem;
-    text-align: center;
-}
-.hero-art{
-    margin:30px 0;
-}
-.hero-art img{
-    min-width:280px;
-}
-.hero-actions{
-    width:100%;
-    flex-direction:column;
-    gap:14px;
-    margin-top: -20px;   
-}
-.btn{
-   
-    width:100%;
-    text-align:center;
-
-}
-.scroll-cue{
-    bottom:28px;
-}
-.scroll-cue .line{
-    width:1px; height:20px;
-   
-  }
-}
 
   /* ---------- section shell ---------- */
   .section{
@@ -383,7 +382,7 @@
   .about-copy strong{color:var(--text); font-weight:600;}
 
   .stat-card{
-    background:var(--bg-panel);
+    background:rgba(31, 31, 36, 0.774);
     border:1px solid var(--border);
     border-radius:14px;
     padding:22px 24px;
@@ -397,7 +396,7 @@
   }
   .stat-card .label{
     font-size:0.85rem;
-    color:var(--text-muted);
+    color:var(--text);
     margin-top:4px;
   }
   .badge{
