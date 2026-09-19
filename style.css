@@ -770,6 +770,12 @@
     
     border-radius: 10px 10px 0px 0px ;
   }
+  .footer-info{
+    padding-top: 20px;
+  }
+  .footer-bottom{
+    padding-bottom: 20px;
+  }
   .foot{
      padding:28px clamp(160px,5vw,4px) 40px;
     display:flex;
