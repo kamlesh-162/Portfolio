@@ -164,3 +164,6 @@ if (window.matchMedia("(hover: hover)").matches) {
     });
 
 }
+document.querySelector('.js-view').addEventListener('click', () => {
+  window.open('./img/resume103.pdf', '_blank');
+});
