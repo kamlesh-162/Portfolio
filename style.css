@@ -381,8 +381,9 @@
   /* ---------- about ---------- */
   .about-grid{
     display:grid;
-    grid-template-columns:0.9fr 1.1fr;
+    grid-template-columns:1fr 380px;
     gap:clamp(30px,6vw,80px);
+    align-items: center;
   }
   @media (max-width:800px){ .about-grid{grid-template-columns:1fr;} }
 
@@ -420,6 +421,44 @@
     margin-top:8px;
   }
   .badge::before{content:"✓"; color:var(--violet);}
+
+  .js-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+ 
+}
+
+.js-pro {
+  width: 100%;
+  max-width: 380px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid var(--violet);
+  display: block;
+  transition: transform 0.3s ease;
+}
+.js-pro:hover {
+  transform: scale(1.03);
+}
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .js-profile {
+    justify-content: center;
+  }
+
+  .js-pro {
+    max-width: 260px;
+    height: 260px;
+  }
+}
 
   /* ---------- skills ---------- */
   .skills-grid{
