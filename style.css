@@ -446,8 +446,14 @@
 }
 @media (max-width: 700px) {
   .about-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Profile image at the top */
+  .about-grid > div:last-child {
+    order: -1;
   }
 
   .js-profile {
@@ -455,8 +461,8 @@
   }
 
   .js-pro {
-    max-width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
   }
 }
 
