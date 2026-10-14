@@ -26,9 +26,17 @@
   }
   ::selection{background:var(--violet); color:#fff;}
 
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  @media (prefers-reduced-motion: reduce) {
+  *:not(.dino):not(.dino-inner) {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
 
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
@@ -1175,3 +1183,64 @@
         border-color 0.2s ease,
         background 0.2s ease;
 }
+
+/* dino */
+
+/* Outer container: entire area is clickable */
+
+
+/* Dino strip above the main content and footer */
+.dino-outer {
+  position: relative;
+  z-index: 500;
+  isolation: isolate;
+  width: 100%;
+  height: 65px;
+  overflow: hidden;
+  /* margin-bottom: -1px; */
+  overflow: visible; /* Allow the dino to jump above the strip */
+  cursor: pointer;
+  /* border-bottom: 2px solid var(--border); */
+}
+
+.dino-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dino {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 501;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* Flip the dino when changing direction */
+.dino-inner.facing-left .dino {
+  transform: scaleX(-1);
+}
+
+/* Jump animation */
+.dino-inner.jumping .dino {
+  animation: dinoJump 0.5s ease-out;
+}
+
+@keyframes dinoJump {
+  0%, 100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -40px;
+  }
+}
+
+
+
+

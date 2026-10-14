@@ -164,6 +164,104 @@ if (window.matchMedia("(hover: hover)").matches) {
     });
 
 }
-document.querySelector('.js-view').addEventListener('click', () => {
-  window.open('./img/resume103.pdf', '_blank');
-});
+const viewButton = document.querySelector('.js-view');
+
+if (viewButton) {
+  viewButton.addEventListener('click', () => {
+    window.open('./img/resume103.pdf', '_blank');
+  });
+}
+
+
+
+const outer = document.getElementById("dinoOuter");
+const inner = document.getElementById("dinoInner");
+const dino = document.getElementById("dino");
+
+if (outer && inner && dino) {
+  const frames = [
+    "img/OTrex1.png",
+    "img/OTrex2.png"
+  ];
+
+  // Preload both running images
+  frames.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  let x = 0;
+  let direction = 1;
+  let frame = 0;
+  let lastTime = 0;
+  let lastFrame = 0;
+  let jumping = false;
+  let jumpTimer;
+
+  const speed = 100;
+  const frameDelay = 120;
+
+  function animate(time) {
+    const maxX = Math.max(
+      0,
+      inner.clientWidth - dino.offsetWidth
+    );
+
+    if (lastTime === 0) lastTime = time;
+
+    const delta = Math.min((time - lastTime) / 1000, 0.05);
+    lastTime = time;
+
+    if (maxX > 0) {
+      x += direction * speed * delta;
+
+      if (x >= maxX) {
+        x = maxX;
+        direction = -1;
+      } else if (x <= 0) {
+        x = 0;
+        direction = 1;
+      }
+    }
+
+    dino.style.left = `${x}px`;
+
+    inner.classList.toggle("facing-left", direction === -1);
+
+    if (!jumping && time - lastFrame >= frameDelay) {
+      frame = 1 - frame;
+      dino.src = frames[frame];
+      lastFrame = time;
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  // Jump when clicking or touching anywhere in the outer area
+  outer.addEventListener("pointerdown", () => {
+    if (jumping) return;
+
+    jumping = true;
+    inner.classList.add("jumping");
+
+    clearTimeout(jumpTimer);
+
+    jumpTimer = setTimeout(() => {
+      inner.classList.remove("jumping");
+      jumping = false;
+    }, 500);
+  });
+
+  window.addEventListener("resize", () => {
+    const maxX = Math.max(
+      0,
+      inner.clientWidth - dino.offsetWidth
+    );
+
+    x = Math.min(x, maxX);
+    dino.style.left = `${x}px`;
+  });
+
+  // Start exactly one animation loop
+  requestAnimationFrame(animate);
+}
