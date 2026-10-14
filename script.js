@@ -180,8 +180,23 @@ const dino = document.getElementById("dino");
 
 if (outer && inner && dino) {
   const frames = [
-    "img/OTrex1.png",
-    "img/OTrex2.png"
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T2.png",
+    "img/Dion/T1.png",
+    "img/Dion/T4.png"
+    
   ];
 
   // Preload both running images
@@ -198,8 +213,8 @@ if (outer && inner && dino) {
   let jumping = false;
   let jumpTimer;
 
-  const speed = 100;
-  const frameDelay = 120;
+  const speed = 90;
+  const frameDelay = 150;
 
   function animate(time) {
     const maxX = Math.max(
@@ -229,7 +244,7 @@ if (outer && inner && dino) {
     inner.classList.toggle("facing-left", direction === -1);
 
     if (!jumping && time - lastFrame >= frameDelay) {
-      frame = 1 - frame;
+      frame = (frame+1)%frames.length;
       dino.src = frames[frame];
       lastFrame = time;
     }
